@@ -43,7 +43,7 @@
         </dependency>
 
     </dependencies>
-    
+
     <!-- ✅ Surefire Plugin added here -->
     <build>
         <plugins>
@@ -53,7 +53,7 @@
                 <version>3.0.0-M7</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
