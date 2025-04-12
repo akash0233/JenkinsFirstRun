@@ -17,6 +17,7 @@ public class ActionClass {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
+        System.out.println(driver.getCurrentUrl());//new step
 
         Actions a = new Actions(driver);
         WebElement serach = driver.findElement(By.xpath("//textarea[@title='Search']"));
