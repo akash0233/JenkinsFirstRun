@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +11,14 @@ import org.testng.annotations.Test;
 public class ActionClass {
     @Test
     public void sampleTest(){
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless");
 
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver(options);
+        //System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        //WebDriver driver = new ChromeDriver(options);
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
         System.out.println(driver.getCurrentUrl());//new step
